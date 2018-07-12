@@ -1,0 +1,84 @@
+
+/*INICIO - página de Login*/
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+.form-signin .checkbox {
+  font-weight: 400;
+}
+.form-signin .form-control {
+  position: relative;
+  box-sizing: border-box;
+  height: auto;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.panel .panel-heading{
+  background-color: rgba(27, 106, 117,1);
+  color: #ffffff;
+}
+
+.panel-default>.panel-heading .badge{
+  background-color: #ffffff;
+  color: rgb(27, 106, 117);
+}
+
+.modal-backdrop{
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  z-index:500;
+  background-color:#000;
+}
+.modal-backdrop.fade{
+  filter:alpha(opacity=0);
+  opacity:0
+}
+.modal-backdrop.in{
+  filter:alpha(opacity=50);
+  opacity:.5
+}
+/*FIM - página de Login*/
+
+/*INICIO - PAINEL ADMINISTRATIVO*/
+
+.botao{
+  background-color: #2b2b3e;
+  font-size: 40px;
+  padding: 10px;
+  width: 500px;
+  height: 200px;
+  border-style: none;
+  margin: 25px;
+  cursor: pointer;
+  overflow: hidden;
+  color: #fff;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .botao{
+    margin: 10px;
+  }
+}
+
+
+/*FIM - PAINEL ADMINISTRATIVO*/

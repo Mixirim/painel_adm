@@ -1,0 +1,85 @@
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+a{
+	color: #fff;
+}
+
+a:hover{
+	text-decoration: none;
+	color: #fff;
+}
+
+
+.logo-admin{
+	width: 350px;
+	margin-top: 50px;
+	margin-bottom: 20px;
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.panel .panel-heading{
+	background-color: rgba(27, 106, 117,1);
+	color: #ffffff;
+}
+
+.panel-default>.panel-heading .badge{
+	background-color: #ffffff;
+	color: rgb(27, 106, 117);
+}
+
+.modal-backdrop{
+	position:fixed;
+	top:0;
+	right:0;
+	bottom:0;
+	left:0;
+	z-index:500;
+	background-color:#000;
+}
+.modal-backdrop.fade{
+	filter:alpha(opacity=0);
+	opacity:0
+}
+.modal-backdrop.in{
+	filter:alpha(opacity=50);
+	opacity:.5
+}
+
+/*--------------------------*/
+
+
+.box{
+	background-color: rgba(15,95,75,1);
+	padding: 30px; 
+	margin-top: 20px;
+}
+
+.quadro-sombra{
+	background-color: #ffffff;
+	-webkit-box-shadow: 10px 10px 49px 0px rgba(0,0,0,0.27);
+	-moz-box-shadow: 10px 10px 49px 0px rgba(0,0,0,0.27);
+	box-shadow: 10px 10px 49px 0px rgba(0,0,0,0.27);
+	padding-bottom: 25px;
+	margin-bottom: 25px;
+}
+
+.box:hover,.nav-link:hover{
+	background-color: rgba(15,95,75,0.8);
+	transition: 0.7s;
+} /*aplica efeito nos quadros de destaque e no fundo do menu*/
+
+.txt-titulo{
+	font-size: 25px;
+	position: relative;
+	display: block;
+	text-align: center;
+	padding: 30px;
+}
+
+
