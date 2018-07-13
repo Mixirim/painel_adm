@@ -21,10 +21,10 @@
   <div>
       <div class="container">
           <div class="row">
-              <div class="col-md-6 d-flex justify-content-center"><button class="botao" type="button">Cadastrar Administrador</button></div>
-              <div class="col-md-6 d-flex justify-content-center"><button class="botao" type="button">Visualizar Administradores</button></div>
-              <div class="col-md-6 d-flex justify-content-center"><button class="botao" type="button">Visualizar Inscritos</button></div>
-              <div class="col-md-6 d-flex justify-content-center"><button class="botao" type="button">Visualizar Concursos</button></div>
+              <div class="col-md-6 d-flex justify-content-center"><a href="cadastro.php" class="botao" role="button">Cadastrar Administrador</a></div>
+              <div class="col-md-6 d-flex justify-content-center"><a class="botao" role="button">Visualizar Administradores</a></div>
+              <div class="col-md-6 d-flex justify-content-center"><a class="botao" role="button">Visualizar Inscritos</a></div>
+              <div class="col-md-6 d-flex justify-content-center"><a class="botao" role="button">Visualizar Concursos</a></div>
           </div>
       </div>
   </div>

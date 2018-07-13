@@ -1,17 +1,8 @@
 <?php
 //require_once "config.php";
-include ("header.php");
+include ("cabecalho.php");
 ?>
 
-<!--<html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html, charset=utf-8">
-	<title>Cadastra Administrador para o Sistema</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-
-<img src="img/sistema_logo.png" width="150" alt="Logo da Sistema"/>-->
 <br/><br/><br/><br/>
 <div id="cadastro">
 	<form class="form-horizontal" method="post" action="?go=cadastrar">
@@ -59,19 +50,19 @@ if(@$_GET['go'] == 'cadastrar'){
 	$pwd = $_POST['senha'];
 
 	if(empty($nome)){
-		echo "<script>alert('Preencha todos os campos para se cadastrar.'); history.back();</script>";
+		echo "<script>alert('O preenchimento do campo NOME é obrigatório.'); history.back();</script>";
 	}elseif(empty($email)){
-		echo "<script>alert('Preencha todos os campos para se cadastrar.'); history.back();</script>";
+		echo "<script>alert('O preenchimento do campo E-MAIL é obrigatório..'); history.back();</script>";
 	//}elseif(empty($user)){
 		//echo "<script>alert('Preencha todos os campos para se cadastrar.'); history.back();</script>";
 	}elseif(empty($pwd)){
-		echo "<script>alert('Preencha todos os campos para se cadastrar.'); history.back();</script>";
+		echo "<script>alert('O preenchimento do campo SENHA é obrigatório..'); history.back();</script>";
 	}else{
-		$query1 = mysql_num_rows(mysql_query("SELECT * FROM usuario WHERE email = '$email'"));
+		$query1 = mysql_num_rows(mysql_query("SELECT * FROM adm WHERE email = '$email'"));
 		if($query1 == 1){
 			echo "<script>alert('Este e-mail já está cadastrado.'); history.back();</script>"; 
 		}else{
-			mysql_query("insert into usuario (nome, email, senha, data) values ('$nome','$email','$pwd', NOW())");
+			mysql_query("insert into adm (nome, email, senha, data) values ('$nome','$email','$pwd', NOW())");
 			echo "<script>alert('Usuário cadastrado com sucesso.');</script>";
 			echo "<meta http-equiv='refresh' content='0, url=./'>";
 		}
