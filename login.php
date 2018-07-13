@@ -20,6 +20,7 @@ if (!isset($_SESSION['user_session']) && !isset($_SESSION['pwd_session'])) {
       
       <button class="btn btn-lg btn-primary btn-block" type="submit" id="btnEntrar">Entrar</button>
     </form>
+    <p><a href="cadastro.php">Clique aqui para se cadastrar</a></p>
   </div>
 
 <?php
