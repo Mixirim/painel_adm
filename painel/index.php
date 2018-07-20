@@ -1,9 +1,9 @@
 <?php
-    session_start();
+   /* session_start();
     require_once "../config.php";
     if (!isset($_SESSION['user_session']) && !isset($_SESSION['pwd_session'])) {
       echo "<meta http-equiv='refresh' content='0, ../'>";
-    }else{
+    }else{*/
 ?>
 
 <?php
@@ -21,12 +21,20 @@
   <div>
       <div class="container">
           <div class="row">
-              <div class="col-md-6 d-flex justify-content-center"><a href="cadastro.php" class="botao" role="button">Cadastrar Administrador</a></div>
-              <div class="col-md-6 d-flex justify-content-center"><a class="botao" role="button">Visualizar Administradores</a></div>
-              <div class="col-md-6 d-flex justify-content-center"><a class="botao" role="button">Visualizar Inscritos</a></div>
-              <div class="col-md-6 d-flex justify-content-center"><a class="botao" role="button">Visualizar Concursos</a></div>
-          </div>
-      </div>
+            <div class="d-flex justify-content-center col-md-6 mt-4">
+              <a href="cadastro.php" class="btn btn-primary btn-lg p-4" tabindex="-1" role="button" aria-disabled="true">Cadastrar Administrador</a>
+            </div>
+            <div class="d-flex justify-content-center col-md-6 mt-4">
+              <a href="lista_adm.php" class="btn btn-primary btn-lg p-4" tabindex="-1" role="button" aria-disabled="true">Visualizar Administradores</a>
+            </div>
+            <div class="d-flex justify-content-center col-md-6 mt-4">
+              <a href="lista_inscritos.php" class="btn btn-primary btn-lg p-4" tabindex="-1" role="button" aria-disabled="true">Visualizar Inscritos</a>
+            </div>
+            <div class="d-flex justify-content-center col-md-6 mt-4">
+              <a href="#" class="btn btn-primary btn-lg p-4" tabindex="-1" role="button" aria-disabled="true">Visualizar Concursos</a>
+            </div>
+          </div><!--fim ROW-->
+      </div><!--fim CONTAINER-->
   </div>
 
 <?php
@@ -34,5 +42,5 @@
 ?>
 
 <?php
-}
+//}
 ?>

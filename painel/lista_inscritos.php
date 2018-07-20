@@ -5,7 +5,7 @@
 <!-- Begin page content -->
 		
 		<div class="container"><br/><br/><br/>
-			<h3>Listagem de Administradores do Sistema</h3>
+			<h3>Listagem de Inscritos nos Concursos</h3>
 			<!-- Painel -->
 			
 			<div class="row">
@@ -16,8 +16,8 @@
 				{
 					$usuario_id=$_GET["id_excluir"];
 					
-					$query = "	DELETE FROM adm 
-								WHERE id_adm='$id_adm'";
+					$query = "	DELETE FROM usuario 
+								WHERE usuario_id='$usuario_id'";
 					
 					mysql_query($query,$con);
 				}
@@ -25,7 +25,7 @@
 
 			<?php
 				
-				$query = "	SELECT * FROM adm";
+				$query = "	SELECT * FROM usuario";
 				
 				$resultado = mysql_query($query, $con);
 
@@ -37,12 +37,12 @@
 					
 				<div class="col-md-12">
 					<div class="panel panel-default">
-						<div class="panel-heading"><strong><?php echo $linha['nome']; ?></strong><span class="badge pull-right"><?php echo $linha['id_adm']; ?></span></div>
+						<div class="panel-heading"><strong><?php echo $linha['nome']; ?></strong><span class="badge pull-right"><?php echo $linha['usuario_id']; ?></span></div>
 						<div class="panel-body">
 						
 							<p>
 								<strong>ID Usuário:</strong>
-								<?php echo $linha['id_adm']; ?>
+								<?php echo $linha['usuario_id']; ?>
 							</p>
 
 							<p>
@@ -62,12 +62,12 @@
 
 							
 							<!-- Button trigger modal -->
-							<a href="#" role="button" class="btn btn-danger btn-md" data-toggle="modal" data-target="#myModal<?php echo $linha['id_adm']; ?>">
+							<a href="#" role="button" class="btn btn-danger btn-md" data-toggle="modal" data-target="#myModal<?php echo $linha['usuario_id']; ?>">
 							  Excluir
 							</a>
 
 							<!-- Modal -->
-							<div class="modal fade" id="myModal<?php echo $linha['id_adm']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+							<div class="modal fade" id="myModal<?php echo $linha['usuario_id']; ?>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
 							  <div class="modal-dialog" role="document">
 							    <div class="modal-content">
 							      <div class="modal-header">
@@ -80,7 +80,7 @@
 							      </div>
 							      <div class="modal-footer">
 							        <a href="#" role="button" class="btn btn-default" data-dismiss="modal">Cancelar</a>
-							        <a href="lista_adm.php?id_excluir=<?php echo $linha['id_adm']; ?>" class="btn btn-danger btn-md" role="button">Excluir</a>
+							        <a href="lista_adm.php?id_excluir=<?php echo $linha['usuario_id']; ?>" class="btn btn-danger btn-md" role="button">Excluir</a>
 							      </div>
 							    </div>
 							  </div>
